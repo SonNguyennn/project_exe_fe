@@ -19,18 +19,41 @@ export const getOrder = (id, form) => {
             });
         })
 }
+export const createOrder = async (order, navigate) => {
+    try {
+        const emailData = {
+            to: order.email,
+            subject: 'Xác nhận đơn hàng',
+            body: `Cảm ơn bạn đã đặt hàng tại Dynamix!. Xin hãy kiểm tra đơn hàng của bạn và phản hồi với chúng tôi nêu xảy ra vấn đề!`
+        };
 
-export const createOrder = (order, navigate) => {
-    axios.post(API_PATH.order, order)
-        .then(
-            navigate(ORDER_URL.CUSTOMER, {
-                state: { message: MESSAGE.CREATE_SUCCESS }
-            })
-        )
-        .catch(error => {
-            console.log(error)
-        })
-}
+        const emailAdmin = {
+            to: 'nguyenthanhson.19102003@gmail.com',
+            subject: 'Có Đơn Hàng Cần Xác Nhận',
+            body: `Đơn hàng của khách hàng ${order.name} đang đợi xác nhận!!!`
+        }
+
+        axios.post(API_PATH.sms, emailData);
+        axios.post(API_PATH.sms, emailAdmin);
+
+        navigate(ORDER_URL.CUSTOMER, {
+            state: { message: MESSAGE.CREATE_SUCCESS }
+        });
+    } catch (error) {
+        console.error('Error:', error);
+    }
+};
+// export const createOrder = (order, navigate) => {
+//     axios.post(API_PATH.order, order)
+//         .then(
+//             navigate(ORDER_URL.CUSTOMER, {
+//                 state: { message: MESSAGE.CREATE_SUCCESS }
+//             })
+//         )
+//         .catch(error => {
+//             console.log(error)
+//         })
+// }
 
 export const editOrder = (id, order, navigate) => {
     axios.put(API_PATH.order + `/${id}`, order)

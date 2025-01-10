@@ -42,44 +42,44 @@ const Footer = () => {
                 </Col>
                 <Col span={8} className='footer-content'>
                     <div className='footer-item--title'>
-                        HỆ THỐNG CỬA HÀNG DOTAI
+                        HỆ THỐNG CỬA HÀNG DYNAMIX
                     </div>
                     <ul className='footer-list store-system'>
                         <li>
                             <div className='icon'>
                                 <EnvironmentFilled />
                             </div>
-                            <a href='/'>Store 1: 44A Trần Quang Diệu, Quận 3</a>
+                            <a href='/'>Store 1: 143C/18, Nguyễn Văn Cừ</a>
                         </li>
                         <li>
                             <div className='icon'>
                                 <EnvironmentFilled />
                             </div>
-                            <a href='/'>Store 2: TNP Lý Tự Trọng, Quận 1</a>
+                            <a href='/'>Store 2: 143C/18, Nguyễn Văn Cừ</a>
                         </li>
                         <li>
                             <div className='icon'>
                                 <EnvironmentFilled />
                             </div>
-                            <a href='/'>Store 3: TNP Lê Lai, Quận 1</a>
+                            <a href='/'>Store 3: 143C/18, Nguyễn Văn Cừ</a>
                         </li>
                         <li>
                             <div className='icon'>
                                 <EnvironmentFilled />
                             </div>
-                            <a href='/'>Đại lý phân phối chính hãng: SN 84, Tổ 9, Hoàng Công Chất, P. Mường Thanh, TP Điện Biên</a>
+                            <a href='/'>số 600 Nguyễn Văn Cừ- Phường An Bình - Quận Ninh Kiều- Thành Phố Cần Thơ</a>
                         </li>
                         <li>
                             <div className='icon'>
                                 <PhoneFilled />
                             </div>
-                            <a href='/'>0357 420 420</a>
+                            <a href='/'>0335 624 825</a>
                         </li>
                         <li>
                             <div className='icon'>
                                 <MailFilled />
                             </div>
-                            <a href='/'>streetweareazy@gmail.com</a>
+                            <a href='/'>nguyenthanhson.19102003@gmail.com</a>
                         </li>
                     </ul>
                 </Col>

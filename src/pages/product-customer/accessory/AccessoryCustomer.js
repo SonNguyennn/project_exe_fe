@@ -28,7 +28,7 @@ const AccessoryCustomer = () => {
     <Row>
       <Col offset={1} span={21}>
         <Title level={2} style={{ marginTop: "20px" }}>
-          Accessories
+          Nutrition Bar
         </Title>
         <Row style={{ margin: "20px", marginLeft: 0 }}>
           <div className="product-filter">
@@ -84,7 +84,7 @@ const AccessoryCustomer = () => {
                               item.accessoryPrice -
                               (item.accessoryPrice *
                                 item.accessoryDiscountPercent) /
-                                100
+                              100
                             ).toLocaleString("vi-VN")}
                             ₫ (-{item.accessoryDiscountPercent}%)
                           </p>

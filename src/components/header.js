@@ -186,7 +186,7 @@ const Header = () => {
       <div className="flex-space-between">
         <p className="text">TỔNG TIỀN:</p>
         <p style={{ color: "red", fontWeight: "600", fontSize: 16 }}>
-          {total.toLocaleString()}0đ
+          {total.toLocaleString()}đ
         </p>
       </div>
       <div className="flex-space-between cart-pop-navigate">
@@ -213,33 +213,33 @@ const Header = () => {
       label: <Link to="/customer">HOME</Link>,
       key: "HOME",
     },
+    // {
+    //   label: <Link to="/customer/tshirt">T-SHIRT</Link>,
+    //   key: "T-SHIRT",
+    // },
+    // {
+    //   label: <Link to="/customer/pant">PANTS</Link>,
+    //   key: "PANTS",
+    // },
+    // {
+    //   label: <Link to="/customer/shoes">SHOES</Link>,
+    //   key: "SHOES",
+    // },
     {
-      label: <Link to="/customer/tshirt">T-SHIRT</Link>,
-      key: "T-SHIRT",
-    },
-    {
-      label: <Link to="/customer/pant">PANTS</Link>,
-      key: "PANTS",
-    },
-    {
-      label: <Link to="/customer/shoes">SHOES</Link>,
-      key: "SHOES",
-    },
-    {
-      label: <Link to="/customer/accessory">ACCESSORIES</Link>,
+      label: <Link to="/customer/accessory">NUTRITION BAR</Link>,
       key: "ACCESSORIES",
     },
 
+    // {
+    //   label: <Link to="/customer/about">ABOUT</Link>,
+    //   key: "ABOUT",
+    // },
+    // {
+    //   label: <Link to="/customer/exchange-policy">EXCHANGE POLICY</Link>,
+    //   key: "EXCHANGE POLICY",
+    // },
     {
-      label: <Link to="/customer/about">ABOUT</Link>,
-      key: "ABOUT",
-    },
-    {
-      label: <Link to="/customer/exchange-policy">EXCHANGE POLICY</Link>,
-      key: "EXCHANGE POLICY",
-    },
-    {
-      label: <Link to="/customer/contact">CONTACT</Link>,
+      label: <Link to="/customer/contact">CALO CALCULATOR</Link>,
       key: "CONTACT",
     },
   ];
@@ -315,7 +315,7 @@ const Header = () => {
                                 item.tshirtPrice -
                                 (item.tshirtPrice *
                                   item.tshirtDiscountPercent) /
-                                  100
+                                100
                               ).toLocaleString("vi-VN")}
                               ₫
                               <del>
@@ -357,7 +357,7 @@ const Header = () => {
                               {(
                                 item.pantPrice -
                                 (item.pantPrice * item.pantDiscountPercent) /
-                                  100
+                                100
                               ).toLocaleString("vi-VN")}
                               ₫
                               <del>
@@ -398,7 +398,7 @@ const Header = () => {
                               {(
                                 item.shoesPrice -
                                 (item.shoesPrice * item.shoesDiscountPercent) /
-                                  100
+                                100
                               ).toLocaleString("vi-VN")}
                               ₫
                               <del>
@@ -417,7 +417,7 @@ const Header = () => {
                 ""
               )}
               {searchList?.accessories &&
-              searchList?.accessories?.length !== 0 ? (
+                searchList?.accessories?.length !== 0 ? (
                 <List
                   itemLayout="horizontal"
                   dataSource={searchList?.accessories}
@@ -441,7 +441,7 @@ const Header = () => {
                                 item.accessoryPrice -
                                 (item.accessoryPrice *
                                   item.accessoryDiscountPercent) /
-                                  100
+                                100
                               ).toLocaleString("vi-VN")}
                               ₫
                               <del>

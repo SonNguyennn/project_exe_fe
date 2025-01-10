@@ -33,7 +33,7 @@ const Home = () => {
                 <Col span={6} className='service-item'>
                     <CreditCardOutlined className='service-icon' />
                     <h2 className='service-title'>Order online</h2>
-                    <p>Hotline: 0357 420 420</p>
+                    <p>Hotline: 0335 624 825</p>
                 </Col>
             </Row>
             {/* <div className='container'>
@@ -53,19 +53,19 @@ const Home = () => {
                 <h2 className='home-item-title'>FEEDBACK</h2>
                 <Row className='grid-container'>
                     <div class="item1">
-                        <img src='https://theme.hstatic.net/1000344185/1001270599/14/imgaView1.jpg?v=257' alt='' />
+                        <img src='https://pos.nvncdn.com/29c4f1-30923/ps/20230805_AnpkXXe0uZ.png' alt='' />
                     </div>
                     <div class="item2">
-                        <img src='https://theme.hstatic.net/1000344185/1001270599/14/imgaView3.jpg?v=257' alt='' />
+                        <img src='https://cdnplaynutrition.b-cdn.net/wp-content/uploads/2013/08/IMG_20942-scaled.jpg' alt='' />
                     </div>
                     <div class="item3">
-                        <img src='https://theme.hstatic.net/1000344185/1001270599/14/imgaView2.jpg?v=257' alt='' />
+                        <img src='https://nugo.com/cdn/shop/files/ChurroLaunchCollectionMobile-min.png?v=1719516765&width=1500' alt='' />
                     </div>
                     <div class="item4">
-                        <img src='https://theme.hstatic.net/1000344185/1001270599/14/imgaView4.jpg?v=257' alt='' />
+                        <img src='https://wetrek.vn/pic/products/Thanh-nan_638240832675372626_HasThumb.jpg' alt='' />
                     </div>
                     <div class="item5">
-                        <img src='https://theme.hstatic.net/1000344185/1001270599/14/imgaView5.jpg?v=257' alt='' />
+                        <img src='https://verbenergy.co/cdn/shop/files/ccpb-hero.webp?v=1721929080' alt='' />
                     </div>
                 </Row>
             </div>

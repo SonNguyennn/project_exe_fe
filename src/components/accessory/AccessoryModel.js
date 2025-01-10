@@ -25,6 +25,7 @@ const AccessoryModel = ({ type }) => {
             price: values.price,
             quantity: values.quantity,
             discount_id: values.discount,
+            description: values.description
         }
 
         if (type === 'create') {
@@ -62,6 +63,17 @@ const AccessoryModel = ({ type }) => {
                         <Form.Item
                             name="name"
                             label="Name"
+                            rules={[
+                                {
+                                    required: true,
+                                },
+                            ]}
+                        >
+                            <Input style={{ width: '100%' }} />
+                        </Form.Item>
+                        <Form.Item
+                            name="description"
+                            label="Description"
                             rules={[
                                 {
                                     required: true,

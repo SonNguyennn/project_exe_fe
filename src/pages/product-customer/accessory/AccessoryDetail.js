@@ -207,16 +207,24 @@ const AccessoryDetail = () => {
                             borderBottom: '1px solid #F5F5F5'
                         }}
                     >
-                        <Col span={18}>
-                            ONE SIZE
+                        <Col span={18} style={{ fontSize: '16px' }}>
+                            <Title level={5}>Thành phần: {accessory?.description}</Title>
+                            Sử dụng: dùng ăn liền. Nên dùng hết thanh khi đã xe bao gói.
+                            <br />
+                            <br />
+                            Bảo quản: Nơi thoáng mát, tránh ánh năng trực tiếp. Bảo quản trong tủ lạnh sẽ duy trì được tốt hơn.
+                            <br />
+                            <br />
+                            Thông tin cảnh báo: không sử dụng đối với người có khả năng mẫn cảm hoặc dị ứng với các thành phần trong sản phẩm.
+                            <br />
+                            <br />
+                            HSD: 6 tháng
+                            <br />
+                            <br />
+                            Khối Lượng: 30g
                         </Col>
                         <Col span={6}>
-                            {
-                                accessory?.quantity ?
-                                    `${accessory.quantity} sản phẩm có sẵn`
-                                    :
-                                    `Tạm hết hàng`
-                            }
+
                         </Col>
                     </Row>
                     <Row
@@ -233,6 +241,12 @@ const AccessoryDetail = () => {
                             <Button onClick={handleIncrement} variant='filled' color='default' >+</Button>
                         </div>
                     </Row>
+                    {
+                        accessory?.quantity ?
+                            `${accessory.quantity} sản phẩm có sẵn`
+                            :
+                            `Tạm hết hàng`
+                    }
                     {
                         accessory?.quantity !== 0 ? <Row style={{ marginTop: 30 }}>
                             <div class="box-1" onClick={onFinish}>

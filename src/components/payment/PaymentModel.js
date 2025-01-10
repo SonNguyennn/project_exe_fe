@@ -6,7 +6,7 @@ import { deleteCart, getListCart } from '../../services/cart.service';
 import LocationSelector from './LocationSelector';
 import { useLocation, useNavigate } from 'react-router';
 import { createOrder } from '../../services/order.service';
-import { createPayment } from '../../services/payment.service';
+import { createPayment, createQr } from '../../services/payment.service';
 import axios from 'axios';
 import { useAuth } from '../context/AuthContext';
 import { API_PATH, PATH } from '../../config/api.config';
@@ -139,6 +139,8 @@ const PaymentModel = () => {
         };
         const order = {
             account_id: initialValues.userId,
+            name: values.name,
+            email: values.email,
             phone: values.phone,
             address: selectedCity + ' ' + selectedDistrict + ' ' + selectedWard + ' ' + values.address,
             total_price: values.voucherTotal,
@@ -154,6 +156,7 @@ const PaymentModel = () => {
             createOrder(order, navigate);
         } else if (isVNPay) {
             createPayment(voucherTotal, bankCode, language, name, selectedCity + ' ' + selectedDistrict + ' ' + selectedWard + ' ' + address, phone);
+            // createQr('39792523979', 'NGUYEN THANH SON', 'TPBANK', '10000', 'Thanh toán đơn hàng Dynamix')
         }
     };
     useEffect(() => {

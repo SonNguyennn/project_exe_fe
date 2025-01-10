@@ -28,6 +28,8 @@ export const API_PATH = {
   feedback: baseURL + 'feedback',
   statistic: baseURL + 'statistic',
   admin: baseURL + "admin",
+  sms: baseURL + 'sms/send-email',
+  qr: baseURL + 'qr/generate-qr',
 }
 export const PATH = {
   user: baseURL + "users",
