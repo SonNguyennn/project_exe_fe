@@ -21,10 +21,11 @@ export const getOrder = (id, form) => {
 }
 export const createOrder = async (order, navigate) => {
     try {
+        await axios.post(API_PATH.order, order)
         const emailData = {
             to: order.email,
             subject: 'Xác nhận đơn hàng',
-            body: `Cảm ơn bạn đã đặt hàng tại Dynamix!. Xin hãy kiểm tra đơn hàng của bạn và phản hồi với chúng tôi nêu xảy ra vấn đề!`
+            body: `Cảm ơn ${order.email} bạn đã đặt hàng tại Dynamix!. Xin hãy kiểm tra đơn hàng của bạn và phản hồi với chúng tôi nêu xảy ra vấn đề!`
         };
 
         const emailAdmin = {
